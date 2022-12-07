@@ -23,6 +23,7 @@ Check issues, make a FORK, TEST, DOCUMENT it and PULL REQUEST .
 * RVM
 * Ruby on Rails 
 * Nuxt 3 
+* PostgreSQL
 
 
 ## Step-by-step
@@ -52,6 +53,16 @@ It is our maestro, so let's do it orchestrate .
 - 3.n Set up Capistrano
 
 
+## What's next ?
+
+- Hosting
+- Set up NFTable into an cloud instance
+- Nuxt 3 and Rails 7 with Devise + Omniauth.  Full Authentication boilerplate project. (Coming soon)
+- Learn pentest
+- Upgrading PostgreSQL cluster version
+- CI/CD homemake project
+- Upgrading Node / Nuxt
+- Upgrading Ruby / Rails
 
 ## Bug and Heroes
 
