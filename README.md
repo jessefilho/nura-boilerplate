@@ -1,4 +1,4 @@
-# An application boilerplate with Nuxt 3, Rails 7, and Docker 
+# NURA is An Application Boilerplate with Nuxt 3, Rails 7, and Docker 
 
 This project will assembly all that you need to start a new, modern, multi app compatibility and scable web application using 
 [Nuxt 3](https://nuxt.com/docs/getting-started/introduction) on the 
