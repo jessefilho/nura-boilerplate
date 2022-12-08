@@ -70,3 +70,5 @@ It is our maestro, so let's do it orchestrate .
 
 1. Genesis - It was not a fork from there but a new fresh start. Thanks [@zacharyw](https://github.com/zacharyw)
 https://github.com/zacharyw/nuxt-rails-docker-boilerplate
+
+2. [How to use Vuetify with Nuxt 3](https://codybontecou.com/how-to-use-vuetify-with-nuxt-3.html)
