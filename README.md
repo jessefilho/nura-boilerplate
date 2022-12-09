@@ -73,3 +73,6 @@ https://github.com/zacharyw/nuxt-rails-docker-boilerplate
 
 2. [How to use Vuetify with Nuxt 3](https://codybontecou.com/how-to-use-vuetify-with-nuxt-3.html)
 3. [Intro to Nuxt 3 VeeValidate Form Validation to Your Nuxt 3 / Vue.js 3 Project](https://www.youtube.com/watch?v=QMlsuYcOoVI) Video-Youtube
+4. [how to use vuetify 3 alpha in new nuxt 3 #1183](https://github.com/nuxt/framework/discussions/1183)
+5. [How to use Vuetify with Nuxt 3](https://codybontecou.com/how-to-use-vuetify-with-nuxt-3.html)
+
