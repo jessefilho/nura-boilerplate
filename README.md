@@ -13,6 +13,13 @@ PLease enjoy, share and feel free to contribute for this project.
 
 Check issues, make a FORK, TEST, DOCUMENT it and PULL REQUEST .
 
+## My setting:
+
+Debian on WSL2 Win10;
+```bash
+wsl --install -d Debian
+```
+
 
 ## Prerequisites
 
@@ -45,6 +52,8 @@ It is our maestro, so let's do it orchestrate .
 
 ### Step 2: Nuxt 3 as a front end and basic settings
 - 2.1 Introdution
+- 2.2 Install NVM
+
 - 2.n Set up nuxt.config.js
 - 2.n Set up Jest
 
@@ -75,4 +84,5 @@ https://github.com/zacharyw/nuxt-rails-docker-boilerplate
 3. [Intro to Nuxt 3 VeeValidate Form Validation to Your Nuxt 3 / Vue.js 3 Project](https://www.youtube.com/watch?v=QMlsuYcOoVI) Video-Youtube
 4. [how to use vuetify 3 alpha in new nuxt 3 #1183](https://github.com/nuxt/framework/discussions/1183)
 5. [How to use Vuetify with Nuxt 3](https://codybontecou.com/how-to-use-vuetify-with-nuxt-3.html)
+6. [Install WSL with specific distro](https://pureinfotech.com/install-windows-subsystem-linux-2-windows-10/)
 
