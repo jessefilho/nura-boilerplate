@@ -13,13 +13,44 @@ PLease enjoy, share and feel free to contribute for this project.
 
 Check issues, make a FORK, TEST, DOCUMENT it and PULL REQUEST .
 
-## My setting:
+## My settings:
 
-Debian on WSL2 Win10;
+- Debian on WSL2 Win10;
 ```bash
 wsl --install -d Debian
 ```
 
+- Set up SSH Ed25519 Key
+
+Generating Ed25519 Key
+
+```bash
+ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519 -C "KEY-NAME"
+
+-o : Save the private-key using the new OpenSSH format rather than the PEM format. Actually, this option is implied when you specify the key type as ed25519.
+-a: It’s the numbers of KDF (Key Derivation Function) rounds. Higher numbers result in slower passphrase verification, increasing the resistance to brute-force password cracking should the private-key be stolen.
+-t: Specifies the type of key to create, in our case the Ed25519.
+-f: Specify the filename of the generated key file. If you want it to be discovered automatically by the SSH agent, it must be stored in the default `.ssh` directory within your home directory.
+-C: An option to specify a comment. It’s purely informational and can be anything. But it’s usually filled with <login>@<hostname> who generated the key.
+
+
+```
+
+Adding Your Key to SSH Agent
+
+```bash
+eval "$(ssh-agent -s)"
+```
+
+Then run the following command to add your newly generated Ed25519 key to SSH agent:
+```bash
+ssh-add ~/.ssh/id_ed25519
+```
+
+Copy ssh id_ed25519.pub
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
 
 ## Prerequisites
 
@@ -85,4 +116,4 @@ https://github.com/zacharyw/nuxt-rails-docker-boilerplate
 4. [how to use vuetify 3 alpha in new nuxt 3 #1183](https://github.com/nuxt/framework/discussions/1183)
 5. [How to use Vuetify with Nuxt 3](https://codybontecou.com/how-to-use-vuetify-with-nuxt-3.html)
 6. [Install WSL with specific distro](https://pureinfotech.com/install-windows-subsystem-linux-2-windows-10/)
-
+7. [Upgrade Your SSH Key to Ed25519](https://medium.com/risan/upgrade-your-ssh-key-to-ed25519-c6e8d60d3c54)
