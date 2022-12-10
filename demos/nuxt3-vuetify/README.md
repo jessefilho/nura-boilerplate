@@ -1,6 +1,15 @@
 # How to use Vuetify with Nuxt 3
 
+If you are building VueJS/Nuxt an application and needs a lightweight UI framework,
+Vuetify is the best solution, because it is developed according Vue Philosophy. 
+Components everywhere.
 
+Vuetify is a powerful UI Component Framework built from the ground up 
+to be easy to learn and rewarding to master. Our collection of UI components 
+maintain a consistent style throughout your application with enough 
+customization options to meet any use-case.
+
+[What is Vuetify?](https://next.vuetifyjs.com/en/introduction/why-vuetify/)
 
 ## Setup
 
@@ -25,10 +34,10 @@ Start the development server on http://localhost:3000
 npm run dev
 ```
 
-Install Vuetify 3, sass and vite-plugin-vuetify
+Install Vuetify, sass qnd @mdi/font
 
 ```bash
- npm i vuetify@next sass vite-plugin-vuetify
+ npm i vuetify@next sass @mdi/font
 ```
 
 Create a plugins folder then create a file named 
@@ -49,6 +58,9 @@ export default defineNuxtPlugin(nuxtApp => {
     nuxtApp.vueApp.use(vuetify)
 })
 ```
+
+In the nuxt config file add the CSS
+
 ```bash
 // nuxt.config.ts
 export default defineNuxtConfig({
@@ -62,4 +74,7 @@ export default defineNuxtConfig({
 })
 ```
 
+Troubleshouting:
 
+If some goes wrong 
+Try [https://next.vuetifyjs.com/en/features/treeshaking/#treeshaking](https://next.vuetifyjs.com/en/features/treeshaking/#treeshaking)
