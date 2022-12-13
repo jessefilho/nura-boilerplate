@@ -117,4 +117,4 @@ https://github.com/zacharyw/nuxt-rails-docker-boilerplate
 5. [How to use Vuetify with Nuxt 3](https://codybontecou.com/how-to-use-vuetify-with-nuxt-3.html)
 6. [Install WSL with specific distro](https://pureinfotech.com/install-windows-subsystem-linux-2-windows-10/)
 7. [Upgrade Your SSH Key to Ed25519](https://medium.com/risan/upgrade-your-ssh-key-to-ed25519-c6e8d60d3c54)
-8. [Applying Vee validate Nuxt 3](https://stackblitz.com/edit/vee-validate-v4-vuetify?file=src%2FApp.vue,src%2Fcomponents%2FTextFieldWithValidation.vue)
+8. [vee-validate v4 + vuetify 3 + Nuxt 3](https://stackblitz.com/edit/vee-validate-v4-vuetify?file=src%2FApp.vue,src%2Fcomponents%2FTextFieldWithValidation.vue)
