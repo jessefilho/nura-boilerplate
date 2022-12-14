@@ -120,3 +120,5 @@ https://github.com/zacharyw/nuxt-rails-docker-boilerplate
 8. [vee-validate v4 + vuetify 3 + Nuxt 3](https://stackblitz.com/edit/vee-validate-v4-vuetify?file=src%2FApp.vue,src%2Fcomponents%2FTextFieldWithValidation.vue)
 9. [Nuxt 3 JWT authentication using $fetch and Pinia](https://stackoverflow.com/questions/73398610/nuxt-3-jwt-authentication-using-fetch-and-pinia)
 10. [Install Docker on Debian](https://docs.docker.com/engine/install/debian/)
+11. [Try Docker Compose](https://docs.docker.com/compose/gettingstarted/)
+12. 
