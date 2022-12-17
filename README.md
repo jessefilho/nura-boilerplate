@@ -110,8 +110,16 @@ It is our maestro, so let's do it orchestrate .
 
 1. Genesis - It was not a fork from there but a new fresh start. Thanks [@zacharyw](https://github.com/zacharyw)
 https://github.com/zacharyw/nuxt-rails-docker-boilerplate
-2. [Intro to Nuxt 3 VeeValidate Form Validation to Your Nuxt 3 / Vue.js 3 Project](https://www.youtube.com/watch?v=QMlsuYcOoVI) Video-Youtube
-3. [how to use vuetify 3 alpha in new nuxt 3 #1183](https://github.com/nuxt/framework/discussions/1183)
-4. [How to use Vuetify with Nuxt 3](https://codybontecou.com/how-to-use-vuetify-with-nuxt-3.html)
-5. [Install WSL with specific distro](https://pureinfotech.com/install-windows-subsystem-linux-2-windows-10/)
-6. [Upgrade Your SSH Key to Ed25519](https://medium.com/risan/upgrade-your-ssh-key-to-ed25519-c6e8d60d3c54)
+
+2. [How to use Vuetify with Nuxt 3](https://codybontecou.com/how-to-use-vuetify-with-nuxt-3.html)
+3. [Intro to Nuxt 3 VeeValidate Form Validation to Your Nuxt 3 / Vue.js 3 Project](https://www.youtube.com/watch?v=QMlsuYcOoVI) Video-Youtube
+4. [how to use vuetify 3 alpha in new nuxt 3 #1183](https://github.com/nuxt/framework/discussions/1183)
+5. [How to use Vuetify with Nuxt 3](https://codybontecou.com/how-to-use-vuetify-with-nuxt-3.html)
+6. [Install WSL with specific distro](https://pureinfotech.com/install-windows-subsystem-linux-2-windows-10/)
+7. [Upgrade Your SSH Key to Ed25519](https://medium.com/risan/upgrade-your-ssh-key-to-ed25519-c6e8d60d3c54)
+8. [vee-validate v4 + vuetify 3 + Nuxt 3](https://stackblitz.com/edit/vee-validate-v4-vuetify?file=src%2FApp.vue,src%2Fcomponents%2FTextFieldWithValidation.vue)
+9. [Nuxt 3 JWT authentication using $fetch and Pinia](https://stackoverflow.com/questions/73398610/nuxt-3-jwt-authentication-using-fetch-and-pinia)
+10. [Install Docker on Debian](https://docs.docker.com/engine/install/debian/)
+11. [Try Docker Compose](https://docs.docker.com/compose/gettingstarted/)
+12. 
+
