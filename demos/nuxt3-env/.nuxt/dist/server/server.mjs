@@ -1,0 +1,1 @@
+export { default } from "file:///home/jferreira/nura-boilerplate/demos/nuxt3-env/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
