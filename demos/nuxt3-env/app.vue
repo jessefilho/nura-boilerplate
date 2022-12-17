@@ -4,7 +4,8 @@
   </div>
 </template>
 <script setup>
-const runtimeConfig = useRuntimeConfig()
+const config = useRuntimeConfig()
 
-console.log(runtimeConfig)
+console.log('private',config.apiSecret)
+console.log('public',config.joke)
 </script>
