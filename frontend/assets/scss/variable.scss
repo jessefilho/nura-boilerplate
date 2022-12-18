@@ -1,0 +1,170 @@
+// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
+// default scss variables node_modules/vuetify/src/styles/settings/_variables.scss
+// import locally font 'Fira Sans'
+
+@use 'vuetify/settings' ;
+$headings: settings.$typography;
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: local('Fira Sans'),
+  url('../fonts/Fira_Sans/FiraSans-Regular.ttf') format('truetype');
+}
+
+////give to all classes starting by 'text-' in 'v-app' component, parent of all components,
+//// that propagates rules to all children components, the right font-family property.
+.v-application {
+  [class*='text-'] {
+    color: #36405a;
+    font-family: 'Fira Sans', sans-serif !important;
+  }
+  font-family: 'Fira Sans', sans-serif !important;
+  background: rgb(228 229 230) !important;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  color: rgba(0, 0, 0, 0.60);
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.alert {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  z-index: 1000;
+}
+
+.transparent {
+  background: rgba( 255, 255, 255, 0 )!important;
+}
+.transparent-blue {
+  background: rgba(0, 162, 230, 0.42)!important;
+  backdrop-filter: blur(6.7px)!important;
+  -webkit-backdrop-filter: blur(6.7px)!important;
+}
+.linear-gradient-blue {
+  background: linear-gradient(to right, #0070b8 0%,#008ddf 28%,#00a2e6 48%,#45bfe5 70%,#a7dbf5 100%);
+  color: white!important;
+}
+.linear-gradient-blue-diagonal {
+  background: linear-gradient(45deg, rgba(0,112,184,1) 0%,rgba(0,141,223,1) 20%,rgba(32,124,202,1) 20%,rgba(0,162,230,1) 40%,rgba(41,137,216,1) 40%,rgba(69,191,229,1) 80%,rgba(167,219,245,1) 100%) !important;
+  color: white!important;
+}
+.linear-gradient-blue-top {
+  background: linear-gradient(to bottom, rgba(0,112,184,1) 16%,rgba(0,141,223,1) 83%,rgba(0,162,230,1) 90%,rgba(69,191,229,1) 95%,rgba(69,191,229,1) 95%,rgba(167,219,245,1) 99%);
+}
+.linear-gradient-grey {
+  background: linear-gradient(90deg, rgba(255,255,255,1) 29%, rgba(240,240,240,1) 100%)!important;
+}
+.linear-gradient-grey-top {
+  background: linear-gradient(180deg, rgba(255,255,255,1) 29%, rgba(240,240,240,1) 100%)!important;
+}
+
+.v-card-glass{
+  background: rgb(255, 255, 255) !important;
+  box-shadow: 4px 8px 16px 0 rgba( 31, 38, 135, 0.37 )!important;
+  backdrop-filter: blur( 6.5px )!important;
+  -webkit-backdrop-filter: blur( 6.5px )!important;
+  border-radius: 10px!important;
+  //border: 2px solid rgba( 255, 255, 255, 0.18 )!important;
+
+}
+.v-card-glass-transparent {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  box-shadow: 4px 8px 16px 0 rgba( 31, 38, 135, 0.37 )!important;
+  backdrop-filter: blur(7.6px);
+  -webkit-backdrop-filter: blur(7.6px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.38);
+  border-right: 1px solid rgba(255, 255, 255, 0.38);
+}
+.v-card-glass-blue {
+  background: rgba(0, 162, 230, 0.52)!important;
+  border-radius: 10px!important;
+  box-shadow: 4px 8px 16px 0 rgba( 31, 38, 135, 0.37 )!important;
+  backdrop-filter: blur(11.3px)!important;
+  -webkit-backdrop-filter: blur(11.3px)!important;
+  border-bottom: 2px solid rgba(0, 162, 230, 0.23)!important;
+  border-right: 2px solid rgba(0, 162, 230, 0.23)!important;
+}
+.v-card-glass-yellow {
+  background: rgba(253, 196, 89, 0.66)!important;
+  border-radius: 16px!important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)!important;
+  backdrop-filter: blur(9.3px)!important;
+  -webkit-backdrop-filter: blur(9.3px)!important;
+  border-bottom: 3px solid rgba(253, 196, 89, 0.60)!important;
+  border-right: 3px solid rgba(253, 196, 89, 0.60)!important;
+}
+
+.v-card-neumorphism {
+  border-radius: 10px!important;
+  background: #F0F0F0!important;
+  box-shadow:  20px 20px 60px #bebebe,
+  -20px -20px 60px #ffffff!important;
+}
+.v-card-neumorphism-white {
+  border-radius: 10px!important;
+  background: #ffffff!important;
+  box-shadow:  41px 41px 82px #d9d9d9,
+  -41px -41px 82px #ffffff!important;
+}
+.v-card-neumorphism-pressed-white {
+  border-radius: 10px!important;
+  background: #ffffff!important;
+  box-shadow: inset 41px 41px 82px #d9d9d9,
+  inset -41px -41px 82px #ffffff!important;
+}
+
+.v-card-neumorphism-md {
+  border-radius: 10px!important;
+  background: #F0F0F0!important;
+  box-shadow:  38px 38px 76px #848484,
+  -38px -38px 76px #ffffff!important;
+}
+.v-card-neumorphism-md-white {
+  border-radius: 10px!important;
+  background: #FFFFFF!important;
+  box-shadow:  38px 38px 76px #848484,
+  -38px -38px 76px #ffffff!important;
+}
+.v-card-neumorphism-xs {
+  border-radius: 10px!important;
+  background: #F0F0F0!important;
+  box-shadow:  5px 5px 10px #b6b6b6,
+  -5px -5px 10px #ffffff!important;
+}
+.v-card-neumorphism-xs-white {
+  border-radius: 10px!important;
+  background: #ffffff!important;
+  box-shadow:  5px 5px 10px #b6b6b6,
+  -5px -5px 10px #ffffff!important;
+}
+
+
+
+$card-title-font-size: map-get($headings, 'h6', 'size') !default;
+.v-card__title {
+  font-size: $card-title-font-size ;
+}
+
+$card-subtitle-font-size: map-get($headings, 'subtitle-2', 'size') !default;
+.v-card__title-blue {
+  padding: 0;
+  border-left: solid #00a2e6;
+}
+
+.v-card__subtitle {
+  font-size: $card-subtitle-font-size ;
+}
+
+$card-text-font-size: map-get($headings, 'body-1', 'size') !default;
+.v-card__text {
+  font-size: $card-text-font-size;
+  font-weight: 400 !important;
+  color: #36405a !important;
+}
+
+
