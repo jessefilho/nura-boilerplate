@@ -63,15 +63,15 @@
 <script>
 import { Field, Form } from 'vee-validate';
 import { mdiAccount, mdiLock } from '@mdi/js'
-import * as yup from 'yup';
+// import * as yup from 'yup';
 import {mapActions} from "pinia";
-import {useAuthentication} from "~/stores/authentication/authentication.store";
+// import {useAuthentication} from "~/stores/authentication/authentication.store";
 import AuthTextFieldWithValidation from "~/components/_commons/fields/AuthTextFieldWithValidation.vue";
 
-const schema = yup.object({
-  email: yup.string().email().required().label('E-mail'),
-  password: yup.string().min(6).required(),
-});
+// const schema = yup.object({
+//   email: yup.string().email().required().label('E-mail'),
+//   password: yup.string().min(6).required(),
+// });
 
 export default {
   name: "SignInCard",
@@ -89,29 +89,27 @@ export default {
         password: '',
       },
       error: null,
-      schema:schema,
+      // schema:schema,
       formMeta: {
         valid: null
       }
     }
   },
   mounted() {
-
   },
-  methods:{
-    ...mapActions(useAuthentication,{
-      sign_in:'sign_in'
-    }),
-    onSubmit(value) {
-      this.sign_in(
-          {username:value.email,
-            password: value.password
-          }).catch( error => {
-        console.log(error)
-      })
-    },
-
-  }
+  // methods:{
+  //   ...mapActions(useAuthentication,{
+  //     sign_in:'sign_in'
+  //   }),
+  //   onSubmit(value) {
+  //     this.sign_in(
+  //         {username:value.email,
+  //           password: value.password
+  //         }).catch( error => {
+  //       console.log(error)
+  //     })
+  //   },
+  // }
 
 }
 </script>

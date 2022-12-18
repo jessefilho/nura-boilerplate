@@ -110,5 +110,4 @@ export const useAuthentication = defineStore(namespaced,{
     namespaced: true,
     state : state,
     actions : actions
-
 })

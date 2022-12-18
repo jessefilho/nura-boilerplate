@@ -50,7 +50,7 @@ const { value, handleBlur, errors } = useField(toRef(props, 'name'), undefined);
       :type="type"
       :counter="counter"
       variant="underlined"
-      :prepend-inner-icon="svgPath[0]"
+      :prepend-inner-icon="svgPath[1]"
       :loading="loading"
   />
 </template>

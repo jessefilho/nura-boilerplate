@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
     app: {
         head: {
-            title: 'NURA',
+            title: '',
             titleTemplate: '%s | NURA',
             meta: [
                 { charset: 'utf-8' },
