@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import vuetify from 'vite-plugin-vuetify'
+console.log(`Running in (${process.env.NODE_ENV}) mode`)
 export default defineNuxtConfig({
     app: {
         head: {
@@ -27,18 +29,41 @@ export default defineNuxtConfig({
                 ['defineStore', 'definePiniaStore'], // import { defineStore as definePiniaStore } from 'pinia'
             ],
         }],
+        // Inline module definition
+        async (options, nuxt) => {
+            nuxt.hooks.hook('vite:extendConfig', config => config.plugins.push(
+                vuetify()
+            ))
+        }
 
     ],
     css: [
         'vuetify/lib/styles/main.sass',
         '@mdi/font/css/materialdesignicons.min.css',
     ],
+    runtimeConfig: {
+        NODE_ENV: process.env.NODE_ENV,
+        baseURL: process.env.NUXT_URL_BASE,
+        apiUrl: process.env.API_URL,
+        backgroundColor: '#0070b8',
+
+        apiKey: '',
+        public:{
+
+        },
+
+    },
     build: {
-        transpile: ['vuetify',
-            'yup',
-            'lodash',
+        transpile: [
+            'vuetify',
+            'vee-validate',
             '@vee-validate/rules'
-        ],
+        ]
+    },
+    vite: {
+        define: {
+            'process.env.DEBUG': true,
+        },
     },
     imports: {
         // Auto-import pinia stores defined in `~/stores`
