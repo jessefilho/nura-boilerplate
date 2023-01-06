@@ -15,7 +15,10 @@ const props = defineProps({
     type: String,
     required: true,
   },
-  svgPath: [],
+  icon: {
+    type: String,
+    required: true,
+  },
   loading: {
     type: Boolean,
     required: false,
@@ -38,7 +41,7 @@ const { value, handleBlur, errors } = useField(toRef(props, 'name'), undefined);
       :error-messages="errors"
       :type="type"
       variant="underlined"
-      :prepend-inner-icon="svgPath[0]"
+      :prepend-inner-icon="icon"
       :loading="loading"
   />
   <v-text-field
@@ -50,7 +53,7 @@ const { value, handleBlur, errors } = useField(toRef(props, 'name'), undefined);
       :type="type"
       :counter="counter"
       variant="underlined"
-      :prepend-inner-icon="svgPath[1]"
+      :prepend-inner-icon="icon"
       :loading="loading"
   />
 </template>

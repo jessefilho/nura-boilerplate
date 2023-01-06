@@ -21,12 +21,12 @@
                 :validation-schema="schema"
                 :initial-values="initialValues"
                 @submit="onSubmit"
-                v-slot="{ invalid }"
+                v-slot="{ meta: formMeta }"
           >
             <AuthTextFieldWithValidation name="email"
                                          label="E-mail"
                                          type="email"
-                                         :svgPath="svgPath"
+                                         :icon="'mdi-account'"
                                          :loading="false"
             />
 
@@ -34,7 +34,7 @@
                                          label="Password"
                                          type="password"
                                          :counter="24"
-                                         :svgPath="svgPath"
+                                         :icon="'mdi-lock'"
                                          :loading="false"
             />
 
@@ -43,7 +43,7 @@
                 <v-btn
                     width="80%"
                     class="ma-2"
-                    :disabled="invalid"
+                    :disabled="!formMeta.valid"
                     type="submit"
                     color="primary"
                     :loading="false"
