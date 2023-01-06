@@ -4,11 +4,12 @@ export const useRequest = () => {
 
     return {
         /**
-         * Post method using useFetch
+         * POST method using useFetch
          * @param url {endpoint?:string}
          * @param payload {records}
          */
-        post(url,payload){
+        post(url:{endpoint:string},payload:object){
+            console.log(baseURL)
             return useFetch(url.endpoint,{
                 method: 'POST',
                 body: payload,
@@ -16,7 +17,11 @@ export const useRequest = () => {
                 headers: nuxtApp.$session.config().headers,
             })
         },
-        get(url){
+        /**
+         * GET method using useFetch
+         * @param url {endpoint?:string}
+         */
+        get(url:{endpoint:string}){
             return useFetch(url.endpoint,{
                 method: 'GET',
                 baseURL: baseURL,

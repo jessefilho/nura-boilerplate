@@ -86,8 +86,8 @@ export default {
       svgPath: [mdiAccount, mdiLock],
       loading: false,
       initialValues: {
-        email: '',
-        password: '',
+        email: 'jesse@g.com',
+        password: '!@#$%¨&QWEQWE',
       },
       error: null,
       schema:schema,

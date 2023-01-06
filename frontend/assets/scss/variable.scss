@@ -30,10 +30,11 @@ h2 {
 }
 
 .alert {
-  position: absolute;
-  top: 1%;
+  position: absolute !important;
+  float: right;
+  top: 7%;
   right: 1%;
-  z-index: 1000;
+  z-index: 1000 !important;
 }
 
 .transparent {
