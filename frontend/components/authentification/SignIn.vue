@@ -48,7 +48,7 @@
                     color="primary"
                     :loading="false"
                 >
-                  Log In
+                  Sign In
                 </v-btn>
               </v-col>
             </v-row>
