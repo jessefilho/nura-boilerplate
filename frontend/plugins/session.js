@@ -1,3 +1,5 @@
+import router from "#app/plugins/router.mjs";
+
 const session = {
   /**
    * Set user as log in if data are fetched
@@ -6,6 +8,7 @@ const session = {
   set_sign_in: (value) => {
     sessionStorage.setItem('isLoggedIn', value)
   },
+
   isLoggedIn : () => {
     return sessionStorage.getItem('isLoggedIn')
   },
@@ -24,6 +27,7 @@ const session = {
   user : () => {
     return JSON.parse(sessionStorage.getItem('user'))
   },
+
   /**
    * return refresh_token
    * @returns {any}
@@ -59,7 +63,23 @@ const session = {
         'Authorization': session.access_token()
       },
     }
-  }
+  },
+  /**
+   * boolean about user admin role
+   * @param user
+   * @returns {boolean}
+   */
+  isAdmin : (user) => {
+    return 'groups' in user && user.groups.find(item => item.name === 'admin').name == 'admin'
+  },
+  /**
+   * development mode, useful to hiden features in dev when
+   * application is on staging mode or production mode
+   * @returns {boolean}
+   */
+  inDev: () =>{
+    return process.env.NODE_ENV === 'development'
+  },
 }
 
 

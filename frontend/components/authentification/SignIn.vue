@@ -65,8 +65,9 @@ import { Field, Form } from 'vee-validate';
 import { mdiAccount, mdiLock } from '@mdi/js'
 import * as yup from 'yup';
 import {mapActions} from "pinia";
-// import {useAuthentication} from "~/stores/authentication/authentication.store";
+
 import AuthTextFieldWithValidation from "~/components/_commons/fields/AuthTextFieldWithValidation.vue";
+import {useAuthentication} from "~/store/authentication/authentication.store";
 
 const schema = yup.object({
   email: yup.string().email().required().label('E-mail'),
@@ -74,7 +75,7 @@ const schema = yup.object({
 });
 
 export default {
-  name: "SignInCard",
+  name: "SignIn",
   components:{
     AuthTextFieldWithValidation,
     Field,
@@ -95,21 +96,21 @@ export default {
       }
     }
   },
-  mounted() {
-  },
-  // methods:{
-  //   ...mapActions(useAuthentication,{
-  //     sign_in:'sign_in'
-  //   }),
-  //   onSubmit(value) {
-  //     this.sign_in(
-  //         {username:value.email,
-  //           password: value.password
-  //         }).catch( error => {
-  //       console.log(error)
-  //     })
-  //   },
-  // }
+
+  methods:{
+    ...mapActions(useAuthentication,{
+      sign_in:'sign_in'
+    }),
+    onSubmit(value) {
+      this.sign_in(
+          {username:value.email,
+            password: value.password
+          }).catch( error => {
+        console.log(error)
+      })
+    },
+
+  }
 
 }
 </script>

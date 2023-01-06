@@ -1,19 +1,13 @@
-// https://nuxtjs.org/docs/configuration-glossary/configuration-plugins
-// const config = useRuntimeConfig()
-// const apiURL = config.apiUrl
 
-// console.log('plug api',config)
-// const apiURL = 'http://localhost:3000'
-const apiURL = 'http://erm.vermon.com:3000'
 const administration = {
 
   roles: {
-    endpoint: `${apiURL}/api/v1/roles`,
+    endpoint: `/api/v1/roles`,
     method: 'get',
     defaultPayload: null,
   },
   role: {
-    endpoint: `${apiURL}/api/v1/role`,
+    endpoint: `/api/v1/role`,
     method: 'post',
     defaultPayload: {
       "name": null,
@@ -23,17 +17,17 @@ const administration = {
     },
   },
   menus: {
-    endpoint: `${apiURL}/api/v1/menus`,
+    endpoint: `/api/v1/menus`,
     method: 'get',
     defaultPayload: null,
   },
   groups: {
-    endpoint: `${apiURL}/api/v1/groups`,
+    endpoint: `/api/v1/groups`,
     method: 'get',
     defaultPayload: null,
   },
   group: {
-    endpoint: `${apiURL}/api/v1/group`,
+    endpoint: `/api/v1/group`,
     method: 'post',
     defaultPayload: {
       "name": null,
@@ -45,12 +39,12 @@ const administration = {
     },
   },
   members: {
-    endpoint: `${apiURL}/api/v1/members`,
+    endpoint: `/api/v1/members`,
     method: 'get',
     defaultPayload: null,
   },
   member: {
-    endpoint: `${apiURL}/api/v1/member`,
+    endpoint: `/api/v1/member`,
     method: 'post',
     defaultPayload: [
       {
@@ -62,7 +56,7 @@ const administration = {
     ],
   },
   parties: {
-    endpoint: `${apiURL}/api/v1/parties`,
+    endpoint: `/api/v1/parties`,
     method: 'get',
     defaultPayload: null,
   },
@@ -71,24 +65,24 @@ const administration = {
 
 const session = {
   sign_in:{
-    endpoint: `${apiURL}/api/v1/sign_in`,
+    endpoint: `/api/v1/sign_in`,
     method: 'post',
     defaultPayload: null,
   },
   sign_out:{
-    endpoint: `${apiURL}/api/v1/sign_out`,
+    endpoint: `/api/v1/sign_out`,
     method: 'get',
     defaultPayload: null,
   },
 }
 const user = {
   profile: {
-    endpoint: `${apiURL}/api/v1/user`,
+    endpoint: `/api/v1/user`,
     method: 'get',
     defaultPayload: null,
   },
   users: {
-    endpoint: `${apiURL}/api/v1/users`,
+    endpoint: `/api/v1/users`,
     method: 'get',
     defaultPayload: null,
   },

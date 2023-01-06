@@ -4,7 +4,7 @@ console.log(`Running in (${process.env.NODE_ENV}) mode`)
 export default defineNuxtConfig({
     app: {
         head: {
-            title: '',
+            title: 'APP',
             titleTemplate: '%s | NURA',
             meta: [
                 { charset: 'utf-8' },

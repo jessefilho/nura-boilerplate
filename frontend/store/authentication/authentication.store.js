@@ -1,11 +1,11 @@
 //Remember: to do the modules import in store/index.js
 import {defineStore} from "pinia";
-import {useAlerts} from "~/stores/alerts.store";
+import {useAlerts} from "~/store/alerts.store";
+
 const alerts = useAlerts()
 const nuxtApp =  useNuxtApp()
-
-const router = useRouter();
-
+const post = useRequest().post
+const get = useRequest().get
 
 /**
  *
@@ -35,71 +35,60 @@ const actions = {
         console.log('api_error',error)
         alerts.error(message)
     },
-    async get_user(config){
-        let url = nuxtApp.$api.user.profile.endpoint
-        await useFetch(url, config).then(response => {
-            let data = response.data._rawValue
-            if (data !== null){
-                this.user = data
-                nuxtApp.$session.set(this.user)
-                nuxtApp.$session.set_sign_in(true)
-                this.refreshed = false
-                alerts.success('You are logged in')
-                nuxtApp.$router.push({ path: "/products"})
+    async get_user(){
+        let url = nuxtApp.$api.user.profile
+        await get(url)
+            .then(response => {
+                let data = response.data._rawValue
+                if (data !== null){
+                    this.user = data
+                    nuxtApp.$session.set(this.user)
+                    nuxtApp.$session.set_sign_in(true)
+                    this.refreshed = false
+                    alerts.success('You are logged in')
+                    nuxtApp.$router.push({ path: "/products"})
 
-            } else{
-                this.api_error(response.error,'User not found')
-            }
-        }).catch(error => {
-            this.debug(error)
-        })
+                } else{
+                    this.api_error(response.error,'User not found')
+                }
+            }).catch(error => {
+                this.debug(error)
+            })
     },
 
     async sign_in(loginForm) {
-        let url = nuxtApp.$api.session.sign_in.endpoint
-        await useFetch(url, {
-            method: 'POST',
-            body: loginForm
-        }).then(response => {
-            let data = response.data._rawValue
-            if (data !== null){
-                this.access_token = data.access_token
-                this.refresh_token = data.refresh_token
-                /* Store user in local storage to keep them logged in between page refreshes */
-                nuxtApp.$session.set_tokens(this.access_token,this.access_token)
-                this.get_user(nuxtApp.$session.config())
-
-            }else{
-                this.api_error(response.error,'Error during the process of Sign In')
-            }
-        }).catch(error => {
-            this.debug(error)
-        })
+        let url = nuxtApp.$api.session.sign_in
+        await post(url, loginForm)
+            .then(response => {
+                let data = response.data._rawValue
+                if (data !== null){
+                    this.access_token = data.access_token
+                    this.refresh_token = data.refresh_token
+                    /* Store user in local storage to keep them logged in between page refreshes */
+                    nuxtApp.$session.set_tokens(this.access_token,this.access_token)
+                    this.get_user()
+                }else{
+                    this.api_error(response.error,'Error during the process of Sign In')
+                }
+            }).catch(error => {
+                this.debug(error)
+            })
     },
 
     async sign_out() {
-        this.user = null
-        this.token = null
-        nuxtApp.$session.logout()
-        let url = nuxtApp.$api.session.sign_out.endpoint
-        await useFetch(url, {
-            method: 'POST',
-            body: loginForm
-        }).then(response => {
-            let data = response.data._rawValue
-            if (data !== null){
-                this.access_token = data.access_token
-                this.refresh_token = data.refresh_token
-                /* Store user in local storage to keep them logged in between page refreshes */
-                nuxtApp.$session.set_tokens(this.access_token,this.refresh_token)
-                this.get_user(nuxtApp.$session.config())
 
-            }else{
-                this.api_error(response.error,'Error during the process of Sign In')
-            }
-        }).catch(error => {
-            this.debug(error)
-        })
+
+        let url = nuxtApp.$api.session.sign_out
+        await get(url)
+            .then(response => {
+                console.log(response)
+                //todo: if ok, clean client store and session
+                // this.user = null
+                // this.token = null
+                // nuxtApp.$session.logout()
+            }).catch(error => {
+                this.debug(error)
+            })
     }
 
 };
@@ -110,4 +99,5 @@ export const useAuthentication = defineStore(namespaced,{
     namespaced: true,
     state : state,
     actions : actions
+
 })
