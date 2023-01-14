@@ -21,7 +21,7 @@ import unstorage_47drivers_47fs from 'file:///home/jferreira/nura/demos/nuxt3-en
 import defu from 'file:///home/jferreira/nura/demos/nuxt3-env/node_modules/defu/dist/defu.mjs';
 import { toRouteMatcher, createRouter } from 'file:///home/jferreira/nura/demos/nuxt3-env/node_modules/radix3/dist/index.mjs';
 
-const _runtimeConfig = {"app":{"baseURL":"/","buildAssetsDir":"/_nuxt/","cdnURL":""},"nitro":{"routeRules":{"/__nuxt_error":{"cache":false}},"envPrefix":"NUXT_"},"public":{"apiBase":"/api","joke":"env"},"apiSecret":"env"};
+const _runtimeConfig = {"app":{"baseURL":"/","buildAssetsDir":"/_nuxt/","cdnURL":""},"nitro":{"routeRules":{"/__nuxt_error":{"cache":false}},"envPrefix":"NUXT_"},"public":{"firebaseApiKey":"AIzaSyDPRuZAfcL34d6QbDLDKpKtW5gsAoaeiOI"},"apiSecret":"api-scret"};
 const ENV_PREFIX = "NITRO_";
 const ENV_PREFIX_ALT = _runtimeConfig.nitro.envPrefix ?? process.env.NITRO_ENV_PREFIX ?? "_";
 const getEnv = (key) => {
@@ -454,9 +454,20 @@ const errorHandler = (async function errorhandler(error, event) {
   event.node.res.end(await res.text());
 });
 
+const _AiPfue = defineEventHandler((event) => {
+  const config = useRuntimeConfig();
+  console.log("Config from Server Middleware:", config);
+  event.req.headers.authorization = config.apiSecret;
+});
+
+const _lazy_KSd8cF = () => Promise.resolve().then(function () { return firebasekey_get$1; });
+const _lazy_bNJ7vv = () => Promise.resolve().then(function () { return apisecret_get$1; });
 const _lazy_6HaNAE = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
+  { route: '', handler: _AiPfue, lazy: false, middleware: true, method: undefined },
+  { route: '/api/firebasekey', handler: _lazy_KSd8cF, lazy: true, middleware: false, method: "get" },
+  { route: '/api/apisecret', handler: _lazy_bNJ7vv, lazy: true, middleware: false, method: "get" },
   { route: '/__nuxt_error', handler: _lazy_6HaNAE, lazy: true, middleware: false, method: undefined },
   { route: '/**', handler: _lazy_6HaNAE, lazy: true, middleware: false, method: undefined }
 ];
@@ -533,6 +544,42 @@ server.listen(listenAddress, () => {
   process.on("unhandledRejection", (err) => console.error("[nitro] [dev] [unhandledRejection]", err));
   process.on("uncaughtException", (err) => console.error("[nitro] [dev] [uncaughtException]", err));
 }
+
+const firebasekey_get = defineEventHandler((event) => {
+  const config = useRuntimeConfig();
+  const headers = event.req.headers;
+  console.log(
+    "Header Authorization (FIREBASE KEY):",
+    headers.firebaseapikey,
+    config.public.firebaseApiKey
+  );
+  if (headers.firebaseapikey == config.public.firebaseApiKey) {
+    return "You are authorized";
+  } else {
+    return "Access denied!";
+  }
+});
+
+const firebasekey_get$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': firebasekey_get
+});
+
+const apisecret_get = defineEventHandler((event) => {
+  const config = useRuntimeConfig();
+  const headers = event.req.headers;
+  console.log("Header Authorization:", headers.authorization);
+  if (headers.authorization == config.apiSecret) {
+    return "You are authorized";
+  } else {
+    return "Access denied!";
+  }
+});
+
+const apisecret_get$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': apisecret_get
+});
 
 const appRootId = "__nuxt";
 
