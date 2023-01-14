@@ -5,10 +5,13 @@
 </template>
 <script>
 import SignIn from "~/components/authentification/SignIn.vue";
+
+definePageMeta({
+  layout: "default",
+});
 export default {
-  components: {SignIn},
   middleware: ["auth"],
-  layout: 'public',
+  components: {SignIn},
   name: "index",
 }
 </script>
