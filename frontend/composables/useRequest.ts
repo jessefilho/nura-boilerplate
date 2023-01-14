@@ -1,6 +1,6 @@
 export const useRequest = () => {
     const nuxtApp = useNuxtApp()
-    const baseURL = useRuntimeConfig().apiURL
+    const apiURL = useRuntimeConfig().apiURL
 
     return {
         /**
@@ -9,11 +9,11 @@ export const useRequest = () => {
          * @param payload {records}
          */
         post(url:{endpoint:string},payload:object){
-            console.log(baseURL)
+            console.log(apiURL)
             return useFetch(url.endpoint,{
                 method: 'POST',
                 body: payload,
-                baseURL: baseURL,
+                baseURL: apiURL,
                 headers: nuxtApp.$session.config().headers,
             })
         },

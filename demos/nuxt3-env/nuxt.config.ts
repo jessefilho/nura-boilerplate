@@ -10,6 +10,7 @@ export default defineNuxtConfig({
         // Keys within public, will be also be
         // exposed to the client-side
         public: {
+            env: process.env.NUXT_ENV,
             firebaseApiKey: process.env.FIREBASE_API_KEY,
         },
     },

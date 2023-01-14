@@ -15,6 +15,8 @@ declare module '@nuxt/schema' {
    apiSecret: string,
   }
   interface PublicRuntimeConfig {
+   env: string,
+
    firebaseApiKey: string,
   }
 }

@@ -11,6 +11,12 @@
         </p>
         <br/>
         <p>
+          <b>public.env <br/>(public - mode env)</b>
+        </p>
+        <p className="mt-3 p-3 has-background-success">
+          {{ runtimeConfig.public.env }}
+        </p>
+        <p>
           <b>public.firebaseApiKey <br/>(public - client side)</b>
         </p>
         <p className="mt-3 p-3 has-background-success">

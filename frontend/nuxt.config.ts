@@ -3,13 +3,10 @@ import vuetify from 'vite-plugin-vuetify'
 console.log(`Running in (${process.env.NODE_ENV}) mode`)
 export default defineNuxtConfig({
     runtimeConfig: {
-        backgroundColor: '#0070b8',
         public:{
             NODE_ENV: process.env.NODE_ENV,
-            baseURL: process.env.URLBASE,
-            apiURL: process.env.APIURL,
+            apiURL: process.env.API_URL,
         },
-
     },
     app: {
         head: {
