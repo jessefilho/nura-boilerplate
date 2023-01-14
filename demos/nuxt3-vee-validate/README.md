@@ -47,7 +47,7 @@ Install all dependencies for running vee validate
 ```bash
 npm i yup //schema builder for value parsing and validation
 npm install vee-validate@3 --save // vee validate
-npm @vee-validate/rules //Package with the rules
+npm install @vee-validate/rules //Package with the rules
 ```
 
 Different of Nuxt 2, Vee Validate is set up as plugins, until new modification.

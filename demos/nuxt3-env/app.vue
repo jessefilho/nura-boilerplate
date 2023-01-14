@@ -3,8 +3,7 @@
     <NuxtPage />
   </div>
 </template>
-<script setup>
-const runtimeConfig = useRuntimeConfig()
 
-console.log(runtimeConfig)
-</script>
+<style>
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+</style>
