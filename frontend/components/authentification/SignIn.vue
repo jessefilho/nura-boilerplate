@@ -85,9 +85,12 @@ export default {
     return {
       svgPath: [mdiAccount, mdiLock],
       loading: false,
-      initialValues: {
+      initialValues: this.$session.inDev() ? {
         email: 'jesse@g.com',
         password: '!@#$%¨&QWEQWE',
+      } : {
+        email: '',
+        password: '',
       },
       error: null,
       schema:schema,
