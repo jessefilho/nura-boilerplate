@@ -49,3 +49,6 @@ https://unsplash.com/photos/fPN1w7bIuNU?utm_source=unsplash&utm_medium=referral&
 
 Thanks :  Milad Fakurian
 https://unsplash.com/photos/u8Jn2rzYIps?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+
+Thanks : razorcx-courses
+https://github.com/razorcx-courses/nuxt3-runtime-config-public/blob/master/server/middleware/serverMiddleware.ts
