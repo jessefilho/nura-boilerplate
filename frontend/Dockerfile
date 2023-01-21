@@ -20,12 +20,12 @@ COPY ["package.json", "package-lock.json*", "./"]
 RUN npm install --production
 RUN npm run build
 
-COPY "/.nuxt/dist" .
 
+# COPY "/.nuxt/dist" .
+COPY . .
+
+# Open this port
 EXPOSE 8080
-
-
-
 CMD ["node", ".output/server/index.mjs"]
 
 # Tuto https://dev.to/zalexander/how-to-dockerize-the-nuxt3-beta-on-aws-2964
