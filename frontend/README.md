@@ -65,6 +65,12 @@ Run in detached mode --detach or -d
 $ docker run -it -d nura_frontend:v0.1.1
 ```
 
+Enter on container
+```bash 
+$ docker exec -it CONTAINER_NAME bash
+```
+
+
 To delete all containers including its volumes use,
 ```bash 
 $ docker rm -vf $(docker ps -aq)
@@ -74,6 +80,13 @@ To delete all the images,
 ```bash
 $ docker rmi -f $(docker images -aq)
 ```
+Stop and remove all containers
+```bash
+docker stop $(docker ps -a -q)
+```
+
+
+
 
 # Git
 
