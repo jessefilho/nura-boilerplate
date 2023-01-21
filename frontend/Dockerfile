@@ -15,11 +15,12 @@ ENV API_URL=0.0.0.0:3000/
 WORKDIR /app
 
 # COPY ["package.json", "package-lock.json*", "./"]
-COPY . .
+#COPY package.json .
+COPY [".nuxt/dist", ".output/*", "./"]
 
 # install node package in production mode
-RUN npm i -g npm@9.3.1
-RUN npm run build
+# RUN npm i -g npm@9.3.1
+# RUN npm run build
 
 # Open this port
 EXPOSE 8080
