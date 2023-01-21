@@ -9,14 +9,11 @@ ENV NUXT_HOST=0.0.0.0
 # App port
 ENV NUXT_PORT=8080
 # Url of API
-ENV API_URL=0.0.0.0:3000/
+#ENV API_URL=0.0.0.0:3000/
 
 # create destination directory
 WORKDIR /app
-#COPY . .
-# COPY ["package.json", "package-lock.json*", "./"]
-#COPY package.json .
-COPY ["package.json", "package-lock.json*", "./"]
+
 COPY .nuxt/dist ./dist
 COPY .output ./.output
 
