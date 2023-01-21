@@ -16,8 +16,8 @@ WORKDIR /app
 
 # COPY ["package.json", "package-lock.json*", "./"]
 #COPY package.json .
-COPY .nuxt/dist .
-COPY .output/* .
+#COPY .nuxt/dist .
+#COPY .output/* .
 
 # install node package in production mode
 # RUN npm i -g npm@9.3.1
@@ -25,7 +25,7 @@ COPY .output/* .
 
 # Open this port
 EXPOSE 8080
-CMD ["node", ".output/server/index.mjs"]
+#CMD ["node", ".output/server/index.mjs"]
 
 # Tuto https://dev.to/zalexander/how-to-dockerize-the-nuxt3-beta-on-aws-2964
 # docker build -t <application name> .
