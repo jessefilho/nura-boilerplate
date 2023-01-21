@@ -23,7 +23,7 @@ COPY .output ./.output
 
 # Open this port
 EXPOSE 8080
-#CMD ["node", ".output/server/index.mjs"]
+CMD ["node", ".output/server/index.mjs"]
 
 # Tuto https://dev.to/zalexander/how-to-dockerize-the-nuxt3-beta-on-aws-2964
 # docker build -t <application name> .
