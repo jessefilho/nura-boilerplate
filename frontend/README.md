@@ -56,9 +56,9 @@ Show newly images
 ```bash 
 $ docker images
 ```
-
+Run in detached mode --detach or -d
 ```bash 
-$ docker run -d frontend 
+$ docker run -d nura_frontend:v0.1.1
 ```
 
 To delete all containers including its volumes use,
