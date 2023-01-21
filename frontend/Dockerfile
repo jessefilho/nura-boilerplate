@@ -14,15 +14,12 @@ ENV API_URL=0.0.0.0:3000/
 # create destination directory
 WORKDIR /app
 
-COPY ["package.json", "package-lock.json*", "./"]
+# COPY ["package.json", "package-lock.json*", "./"]
+COPY . .
 
 # install node package in production mode
 RUN npm i -g npm@9.3.1
 RUN npm run build
-
-
-# COPY "/.nuxt/dist" .
-COPY . .
 
 # Open this port
 EXPOSE 8080

@@ -46,7 +46,11 @@ npm run preview
 
 Build Image, it is needed to launch container
 ```bash 
-$ docker build -t frontend . 
+$ docker build -t nura_frontend:v0.1 . 
+```
+Rebuild without take in consideration the cache
+```bash 
+$ docker build --no-cache -t nura_frontend:v0.1 . 
 ```
 Show newly images
 ```bash 
