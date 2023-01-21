@@ -1,1 +1,0 @@
-{"version":3,"file":"default.60a518ad.js","sources":["../../../../layouts/default.vue"],"sourcesContent":["<template>\r\n  <v-app>\r\n    <v-main>\r\n      <slot />\r\n    </v-main>\r\n  </v-app>\r\n</template>\r\n"],"names":["_createBlock","_component_v_app","_withCtx"],"mappings":"mRAEI,EAESA,EAAAC,EAAA,KAAA,SAAAC,EAAA,IAAA,KADC,KAAA,SAAAA,EAAA,IAAA"}

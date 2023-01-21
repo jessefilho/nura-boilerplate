@@ -42,6 +42,18 @@ Locally preview production build:
 npm run preview
 ```
 
+# Dockerfile
+
+Build Image
+```bash $docker build -t frontend . ```
+
+```bash $docker run -d frontend ```
+
+
+# Git
+
+remove all files from git cache
+```bash git rm -r --cached . ```
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 
 Thanks : Pawel Czerwinski
