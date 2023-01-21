@@ -16,7 +16,8 @@ WORKDIR /app
 
 # COPY ["package.json", "package-lock.json*", "./"]
 #COPY package.json .
-COPY [".nuxt/dist", ".output/*", "./"]
+COPY .nuxt/dist .
+COPY .output/* .
 
 # install node package in production mode
 # RUN npm i -g npm@9.3.1
