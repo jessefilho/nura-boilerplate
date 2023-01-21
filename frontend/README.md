@@ -44,11 +44,28 @@ npm run preview
 
 # Dockerfile
 
-Build Image
-```bash $docker build -t frontend . ```
+Build Image, it is needed to launch container
+```bash 
+$ docker build -t frontend . 
+```
+Show newly images
+```bash 
+$ docker images
+```
 
-```bash $docker run -d frontend ```
+```bash 
+$ docker run -d frontend 
+```
 
+To delete all containers including its volumes use,
+```bash 
+$ docker rm -vf $(docker ps -aq)
+```
+
+To delete all the images,
+```bash
+$ docker rmi -f $(docker images -aq)
+```
 
 # Git
 
