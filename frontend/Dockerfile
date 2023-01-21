@@ -17,7 +17,7 @@ WORKDIR /app
 COPY ["package.json", "package-lock.json*", "./"]
 
 # install node package in production mode
-RUN npm install
+RUN npm i -g npm@9.3.1
 RUN npm run build
 
 
