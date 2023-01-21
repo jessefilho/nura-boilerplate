@@ -62,7 +62,7 @@ $ docker run nura_frontend:v0.1.1
 
 Run in detached mode --detach or -d
 ```bash 
-$ docker run -it -d --name nura_frontend -p 80:3000 nura_frontend:v0.1.1
+$ docker run -it -d --name nura_frontend -p 8080:8080 nura_frontend:v0.1
 ```
 
 Enter on container
@@ -82,7 +82,7 @@ $ docker rmi -f $(docker images -aq)
 ```
 Stop and remove all containers
 ```bash
-docker stop $(docker ps -a -q)
+$ docker stop $(docker ps -a -q)
 ```
 
 
