@@ -19,11 +19,11 @@ ENV NODE_ENV=production
 # IP/DNS of host, on docker open for docker network
 ENV NUXT_HOST=0.0.0.0
 # App port
-ENV NUXT_PORT=8080
+ENV NUXT_PORT=3000
 # Url of API
 #ENV API_URL=0.0.0.0:3000/
 # Open this port
-EXPOSE 8080
+EXPOSE 3000
 CMD ["node", ".output/server/index.mjs"]
 
 # Tuto https://dev.to/zalexander/how-to-dockerize-the-nuxt3-beta-on-aws-2964
