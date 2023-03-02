@@ -3,6 +3,10 @@ home
 </template>
 
 <script>
+
+definePageMeta({
+  layout: "public",
+});
 export default {
   name: "index"
 }
