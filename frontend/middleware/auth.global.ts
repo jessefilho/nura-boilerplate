@@ -7,10 +7,10 @@ export default defineNuxtRouteMiddleware((to, from) => {
     console.log('!isLoggedIn', !isLoggedIn)
 
     if(!isLoggedIn){
-        if (to.path === '/sign_in'){
+        if (to.path === '/'){
             abortNavigation()
         }else{
-            return navigateTo('/sign_in')
+            return navigateTo('/')
         }
 
     }else{
