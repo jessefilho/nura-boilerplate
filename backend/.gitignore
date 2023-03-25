@@ -33,8 +33,11 @@
 /config/master.key
 
 # Ignore all keys
-/config/environments/*.key
+/config/environments/development.key
+/config/environments/production.key
 
-.idea
+idea/
+
+
 
 /config/credentials/development.key
