@@ -36,3 +36,5 @@
 /config/environments/*.key
 
 .idea
+
+/config/credentials/development.key

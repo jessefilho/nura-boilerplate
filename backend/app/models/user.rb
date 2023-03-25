@@ -6,5 +6,8 @@ class User < ApplicationRecord
          :recoverable,
          :rememberable,
          :validatable,
+         :confirmable,
+         :lockable,
+         :omniauthable,
          :api
 end

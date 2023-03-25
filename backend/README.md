@@ -6,7 +6,28 @@ Ruby ruby-3.2.0
 devise 4.9.0
 devise-api 0.1.1
 
+### Configuration
+Open the credentials file from the command line.
 
+`$ EDITOR=nano rails credentials:edit --environment test`
+
+`$ EDITOR=nano rails credentials:edit --environment development`
+
+`$ EDITOR=nano rails credentials:edit --environment staging`
+
+`$ EDITOR=nano rails credentials:edit --environment production`
+
+Database initialization of all databases
+
+`$ rails db:migrate`, then `$ rails db:seed` or attention it 
+will drop all database on `databases.yml` 
+`$ rake db:drop db:create db:migrate db:seed`
+
+Database reinitialization of all databases
+
+To drop all database: $ rails db:drop , then $ rails db:migrate
+
+To simple reset: `$ rails db:reset`
 
 ### Create Rails app
 
@@ -87,6 +108,26 @@ before_action :authenticate_devise_api_token!, only:[:restricted]
 ````
 
 # Migrate
+
+### Generating new migrates
+use the command to generate updates on table or new tables
+
+```ruby
+rails generate migration TableName colunm_name:type
+```
+To create table, you can use generate scaffold to be more fast.
+
+exemple:
+````ruby
+# Create Groups model
+rails generate scaffold Group name:string location:string description:string home:string menu:string
+# Create Members relationship model
+rails generate scaffold Members group_owner:boolean main:boolean 
+# Create Roles model
+rails generate scaffold Roles name:string
+````
+
+### deploy modification
 Before run it is necessary apply the devise
 tools and table on database , so run:
 ````ruby
