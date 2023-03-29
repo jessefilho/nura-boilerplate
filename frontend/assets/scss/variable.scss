@@ -11,12 +11,6 @@ $headings: settings.$typography;
   url('../fonts/Fira_Sans/FiraSans-Regular.ttf') format('truetype');
 }
 
-@font-face {
-  font-family: 'Roboto Vermon';
-  src: local('Roboto Vermon'),
-  url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
-}
-
 ////give to all classes starting by 'text-' in 'v-app' component, parent of all components,
 //// that propagates rules to all children components, the right font-family property.
 .v-application {
