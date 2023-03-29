@@ -8,7 +8,7 @@
     <v-list-item v-if="!rail">
       <v-list-item-content>
         <v-list-item-title class="text-h6">
-          Vermon USA
+          MENU
         </v-list-item-title>
         <v-list-item-subtitle>
           Application Modules

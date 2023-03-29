@@ -9,7 +9,7 @@
       exact
     >
       <template v-slot:prepend>
-        <v-icon color="primary">
+        <v-icon color="accent">
           {{item.icon}}
         </v-icon>
       </template>
@@ -31,19 +31,12 @@ export default {
   },
   methods:{
     selectedMenu() {
+      return [{
+        to: '/products',
+        title:'Products',
+        icon: 'mdi-vector-arrange-above'
 
-      //todo: to refactore it
-      // get main group id
-      const group_id = this.user['members'].find(item => item.main === true)['group_id']
-      // extract main menu then convert to an array of objects
-      const main_menu = eval(this.user.groups.find(item => item.id === group_id).menu)
-      // pick the other groups (here we may get all groups, then remove the duplicated menus, but main menu disappears)
-      let aux_menus = Object.assign([], ...this.user.groups.map(item => eval(item.menu)) )
-      // finally, merge and ensure a list with unique menu
-      //  the sequence is important, the main menu MUST be on top
-      return [...new Map([...main_menu, ...aux_menus].map(item =>
-        [item['title'], item])).values()];
-      // return [{}]
+      }]
     }
   }
 }
