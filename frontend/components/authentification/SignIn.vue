@@ -45,7 +45,7 @@
                     class="ma-2"
                     :disabled="!formMeta.valid"
                     type="submit"
-                    color="primary"
+                    color="accent"
                     :loading="false"
                 >
                   Sign In
@@ -86,8 +86,8 @@ export default {
       svgPath: [mdiAccount, mdiLock],
       loading: false,
       initialValues: this.$session.inDev() ? {
-        email: 'jesse@g.com',
-        password: '!@#$%¨&QWEQWE',
+        email: 'admin@nura.com',
+        password: 'kjdbsqfyuirfobzheqifbds',
       } : {
         email: '',
         password: '',
@@ -106,7 +106,8 @@ export default {
     }),
     onSubmit(value) {
       this.sign_in(
-          {username:value.email,
+          {
+            email:value.email,
             password: value.password
           }).catch( error => {
         console.log(error)

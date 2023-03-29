@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify from 'vite-plugin-vuetify'
 console.log(`Running in (${process.env.NODE_ENV}) mode`)
+console.log(`API_URL in (${process.env.API_URL}) mode`)
 export default defineNuxtConfig({
     runtimeConfig: {
         public:{

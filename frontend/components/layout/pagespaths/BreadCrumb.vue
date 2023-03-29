@@ -15,7 +15,7 @@ export default {
   name: "BreadCrumb",
   data (){
     return {
-      inDev: this.$session.inDev(),
+      inDev: false,//this.$session.inDev(),
       items: [
         {
           text: 'Dashboard',

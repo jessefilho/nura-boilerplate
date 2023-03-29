@@ -1,2 +1,0 @@
-import{openBlock as o,createBlock as r,withCtx as t,createVNode as a,renderSlot as l}from"vue";import{_ as n}from"./_plugin-vue_export-helper.a1a6add7.js";import{o as c,p as f}from"../server.mjs";import"#internal/nitro";import"vue-router";const p={};function s(e,_){return o(),r(c,null,{default:t(()=>[a(f,null,{default:t(()=>[l(e.$slots,"default")]),_:3})]),_:3})}const V=n(p,[["render",s]]);export{V as default};
-//# sourceMappingURL=default.60a518ad.js.map

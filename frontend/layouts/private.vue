@@ -16,7 +16,7 @@
         fixed
         app
     >
-      <span> Vermon USA &copy; {{ new Date().getFullYear() }}</span>
+      <span> <a href="https://github.com/jessefilho/nura-boilerplate">NURA</a> &copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
     <drawers v-model="drawer" :user="user" />
 
@@ -52,5 +52,9 @@ export default {
 </script>
 
 <style scoped>
-
+/*avoid background bug*/
+.v-main {
+  background: rgb(203, 202, 202) !important;
+  background-size: cover;
+}
 </style>

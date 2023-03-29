@@ -9,19 +9,19 @@
   },
   "devDependencies": {
     "@mdi/js": "^7.1.96",
-    "nuxt": "3.0.0",
-    "sass": "^1.57.0",
+    "nuxt": "3.2.3",
+    "sass": "^1.58.3",
     "sass-loader": "^13.2.0"
   },
   "dependencies": {
     "@mdi/font": "^7.1.96",
     "@mdi/js": "^7.1.96",
-    "@pinia/nuxt": "^0.4.6",
-    "@vee-validate/rules": "^4.7.3",
-    "pinia": "^2.0.28",
-    "vee-validate": "^4.7.3",
-    "vite-plugin-vuetify": "^1.0.1",
-    "vuetify": "^3.0.5",
-    "yup": "^0.32.11"
+    "@pinia/nuxt": "^0.4.7",
+    "@vee-validate/rules": "^4.7.4",
+    "pinia": "^2.0.32",
+    "vee-validate": "^4.7.4",
+    "vite-plugin-vuetify": "^1.0.2",
+    "vuetify": "^3.1.7",
+    "yup": "^1.0.2"
   }
 }
