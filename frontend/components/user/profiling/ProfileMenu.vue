@@ -50,7 +50,7 @@
                 @click="menu=false"
             >
               <template v-slot:prepend>
-                <v-icon color="primary">{{ item.icon }}</v-icon>
+                <v-icon color="accent">{{ item.icon }}</v-icon>
               </template>
 
             </v-list-item>
@@ -78,6 +78,8 @@
 
 <script>
 import Avatar from "./avatar";
+import {mapActions} from "pinia";
+import {useAuthentication} from "~/store/authentication/authentication.store";
 
 export default {
   name: "ProfileMenu",
@@ -97,6 +99,9 @@ export default {
     }
   },
   methods:{
+    ...mapActions(useAuthentication,{
+      logout:'sign_out'
+    }),
     sign_out(){
       /**
        * todo: call logout procedure
@@ -104,6 +109,7 @@ export default {
       // this.$auth.$storage.removeUniversal('user')
       // Remove saved data from sessionStorage
       this.$session.logout()
+      this.logout()
       navigateTo('/sign_in')
     }
   }

@@ -60,12 +60,14 @@ const actions = {
         let url = nuxtApp.$api.session.sign_in
         await post(url, loginForm)
             .then(response => {
-                let data = response.data._rawValue
+
+                let data = response.data._value
                 if (data !== null){
-                    this.access_token = data.access_token
+                    this.access_token = data.token
                     this.refresh_token = data.refresh_token
+
                     /* Store user in local storage to keep them logged in between page refreshes */
-                    nuxtApp.$session.set_tokens(this.access_token,this.access_token)
+                    nuxtApp.$session.set_tokens(this.access_token,this.refresh_token)
                     this.get_user()
                 }else{
                     this.api_error(response.error,'Error during the process of Sign In')
@@ -76,16 +78,9 @@ const actions = {
     },
 
     async sign_out() {
-
-
         let url = nuxtApp.$api.session.sign_out
-        await get(url)
+        await post(url,{})
             .then(response => {
-                console.log(response)
-                //todo: if ok, clean client store and session
-                // this.user = null
-                // this.token = null
-                // nuxtApp.$session.logout()
             }).catch(error => {
                 this.debug(error)
             })

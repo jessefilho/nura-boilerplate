@@ -45,7 +45,7 @@
                     class="ma-2"
                     :disabled="!formMeta.valid"
                     type="submit"
-                    color="primary"
+                    color="accent"
                     :loading="false"
                 >
                   Sign In
@@ -87,7 +87,7 @@ export default {
       loading: false,
       initialValues: this.$session.inDev() ? {
         email: 'admin@nura.com',
-        password: '123@0987',
+        password: 'kjdbsqfyuirfobzheqifbds',
       } : {
         email: '',
         password: '',
@@ -106,7 +106,8 @@ export default {
     }),
     onSubmit(value) {
       this.sign_in(
-          {username:value.email,
+          {
+            email:value.email,
             password: value.password
           }).catch( error => {
         console.log(error)

@@ -13,7 +13,7 @@ export const useRequest = () => {
                     onRequest({ request, options }) {
                         // Set the request headers
                         options.method = 'POST'
-                        // options.baseURL = baseURL
+                        options.baseURL = baseURL
                         options.headers = nuxtApp.$session.config().headers || {}
                         options.body = payload
                     },

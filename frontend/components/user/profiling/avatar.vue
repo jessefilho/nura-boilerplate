@@ -1,6 +1,6 @@
 <template>
   <v-avatar
-    color="primary"
+    color="accent"
     size="default"
     :alt="fullname()"
   >
